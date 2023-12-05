@@ -1,0 +1,94 @@
+$text: (
+	50: #e6ecfe,
+	100: #cdd9fe,
+	200: #9cb4fc,
+	300: #6a8efb,
+	400: #3869fa,
+	500: #0643f9,
+	600: #0536c7,
+	700: #042895,
+	800: #031b63,
+	900: #010d32,
+	950: #010719,
+);
+
+$background: (
+	50: #e5edff,
+	100: #ccdbff,
+	200: #99b8ff,
+	300: #6694ff,
+	400: #3370ff,
+	500: #004cff,
+	600: #003dcc,
+	700: #002e99,
+	800: #001f66,
+	900: #000f33,
+	950: #00081a,
+);
+
+$primary: (
+	50: #fff8e6,
+	100: #fef1cd,
+	200: #fde39b,
+	300: #fdd568,
+	400: #fcc736,
+	500: #fbb904,
+	600: #c99403,
+	700: #976f02,
+	800: #644a02,
+	900: #322501,
+	950: #191300,
+);
+
+$secondary: (
+	50: #f9fee6,
+	100: #f2fdce,
+	200: #e6fc9c,
+	300: #d9fa6b,
+	400: #ccf939,
+	500: #bff708,
+	600: #99c606,
+	700: #739405,
+	800: #4d6303,
+	900: #263102,
+	950: #131901,
+);
+
+$accent: (
+	50: #feece6,
+	100: #fed8cd,
+	200: #fdb29b,
+	300: #fc8b69,
+	400: #fb6537,
+	500: #fa3e05,
+	600: #c83204,
+	700: #962503,
+	800: #641902,
+	900: #320c01,
+	950: #190601,
+);
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$largeDesktop: 1200px;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+}
+
+body {
+	background: map-get($background, 950);
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.allTransitions {
+	transition: all 400ms ease-in-out;
+}

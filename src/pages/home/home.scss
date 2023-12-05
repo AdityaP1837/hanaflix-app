@@ -1,0 +1,23 @@
+@import "../../global.scss";
+
+.homepage {
+	.homepage-container {
+		width: 400px;
+		height: 30vh;
+		margin: 30% auto;
+		background: map-get($background, 200);
+		padding: 30px;
+		border-radius: 10px;
+		box-shadow: 1px 0px 10px 3px map-get($background, 300);
+
+		@media (max-width: $mobile) {
+			width: 300px;
+		}
+
+		.homepage-option {
+			margin-top: 2.5rem;
+			background: map-get($background, 900);
+			color: map-get($text, 50);
+		}
+	}
+}
