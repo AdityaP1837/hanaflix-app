@@ -25,7 +25,7 @@ const BASE_URL = "https://hanime.tv/api/v8/";
 const headers = {
 	"X-Signature-Version": "web2",
 	"X-Signature": generateRandomString(64),
-	// "User-Agent": user.getRandom(),
+	"User-Agent": user.getRandom(),
 };
 
 export const fetchApi = async (url) => {
