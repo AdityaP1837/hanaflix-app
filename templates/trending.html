@@ -1,0 +1,51 @@
+{% include "base.html" %}
+<div class="trending">
+    <div class="tools">
+        <h1>Trending <span>{{time}}</span></h1>
+        <div class="list-of-tools">
+            <a href="{{ url_for('trending', time='daily', page=0) }}">Daily</a>
+            <a href="{{ url_for('trending', time='weekly', page=0) }}">Weekly</a>
+            <a href="{{ url_for('trending', time='monthly', page=0) }}">Monthly</a>
+            <a href="{{ url_for('trending', time='quarterly', page=0) }}">Quarterly</a>
+            <a href="{{ url_for('trending', time='semi-anually', page=0) }}">Semi-Annually</a>
+            <a href="{{ url_for('trending', time='yearly', page=0) }}">Yearly</a>
+        </div>
+    </div>
+    <div class="trending-container">
+        <div class="t-card">
+            <div class="img">
+                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
+            </div>
+            <div class="text">
+                <a href="{{url_for('watch', slug='lol')}}">
+                    <h4>One Piece</h4>
+                </a>
+            </div>
+        </div>
+        <div class="t-card">
+            <div class="img">
+                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
+            </div>
+            <div class="text">
+                <h4>One Piece</h4>
+            </div>
+        </div>
+        <div class="t-card">
+            <div class="img">
+                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
+            </div>
+            <div class="text">
+                <h4>One Piece</h4>
+            </div>
+        </div>
+        <div class="t-card">
+            <div class="img">
+                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
+            </div>
+            <div class="text">
+                <h4>One Piece</h4>
+            </div>
+        </div>
+    </div>
+
+</div>
