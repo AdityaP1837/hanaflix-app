@@ -71,6 +71,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
 }
 
 a {
@@ -86,6 +87,8 @@ body {
 	background-color: var(--background-950);
 	color: var(--text-100);
 	font-family: 'Nunito', sans-serif;
+	--webkit-scrollbar: none;
+		scroll-behavior: smooth;
 }
 
 header {
@@ -106,13 +109,6 @@ header nav {
 header nav h3 {
 	font-size: 1.8rem;
 	font-weight: 900;
-}
-
-header nav .links {
-	display: flex;
-	align-items: center;
-	gap: 20px;
-	font-weight: 800;
 }
 
 header nav .links a:hover {
@@ -139,13 +135,19 @@ header nav .links div input[type="text"]:focus {
 	outline: var(--text-100);
 }
 
-/** Trending Page */
-
-.trending {
-	max-width: 1200px;
-	margin: 0 auto;
+.mobile-nav {
+	top: -100%;
+	display: none;
+	background: rgba(0, 31, 102, 0.9);
+	transition: top 0.3s ease-in-out;
 }
 
+.mobile-nav.active {
+	top: 0;
+	display: block;
+}
+
+/** Trending Page */
 .trending .tools {
 	width: 100%;
 	display: flex;
@@ -156,8 +158,6 @@ header nav .links div input[type="text"]:focus {
 
 .trending .tools h1 {
 	color: var(--text-50);
-	font-weight: 700;
-	font-style: 1.4rem;
 }
 
 .trending .tools h1 span {
@@ -180,33 +180,23 @@ header nav .links div input[type="text"]:focus {
 	border-radius: 10px;
 }
 
-.trending .trending-container {
-	margin-top: 2rem;
-	display: grid;
-	grid-template-columns: auto auto auto auto;
+.browse .tools .title h4 {
+	color: var(--text-50);
 }
 
-.trending .trending-container .t-card {
-	width: 250px;
-	height: 450px;
+.browse .browse-container .t-card .t-info {
+	background: linear-gradient(to left, rgba(126, 126, 126, 0.8), transparent);
+}
+.browse .browse-container .t-card .t-info .title {
+	color: var(--text-50);
 }
 
-.trending .trending-container .t-card .img {
-	height: 80%;
-	border-radius: 10px;
+.browse .browse-container .t-card .t-info .desc {
+	color: var(--text-100);
 }
 
-.trending .trending-container .t-card .img img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
-}
-
-.trending .trending-container .t-card .text {
-	margin-top: 10px;
-	height: 20%;
-	font-size: 1.5rem;
-	font-weight: 500;
-	overflow: hidden;
+.browse .browse-container .t-card .t-info .count {
+	background: var(--accent-700);
+	color: var(--text-100);
+	font-weight: 800;
 }

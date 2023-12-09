@@ -1,7 +1,7 @@
 {% include "base.html" %}
-<div class="trending">
-    <div class="tools">
-        <h1>Trending <span>{{time}}</span></h1>
+<div class="trending ">
+    <div class="tools max-w-[900px] mx-auto mb-16">
+        <h1 class="text-5xl font-extrabold">Trending <span>{{time}}</span></h1>
         <div class="list-of-tools">
             <a href="{{ url_for('trending', time='daily', page=0) }}">Daily</a>
             <a href="{{ url_for('trending', time='weekly', page=0) }}">Weekly</a>
@@ -11,41 +11,22 @@
             <a href="{{ url_for('trending', time='yearly', page=0) }}">Yearly</a>
         </div>
     </div>
-    <div class="trending-container">
-        <div class="t-card">
-            <div class="img">
-                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
+    <div
+        class="trending-container w-[95%] lg:max-w-[1500px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-11">
+    
+        {% for i in range(10) %}
+        <div class="t-card w-[200px] h-[400px] rounded-lg">
+            <div class="img h-[80%] w-full">
+                <img class="w-full h-full object-cover rounded-lg"
+                    src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
             </div>
-            <div class="text">
+            <div class="text h-[20%] w-full overflow-hidden mt-3">
                 <a href="{{url_for('watch', slug='lol')}}">
-                    <h4>One Piece</h4>
+                    <h4 class="text-xl">One Piece</h4>
                 </a>
             </div>
         </div>
-        <div class="t-card">
-            <div class="img">
-                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
-            </div>
-            <div class="text">
-                <h4>One Piece</h4>
-            </div>
-        </div>
-        <div class="t-card">
-            <div class="img">
-                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
-            </div>
-            <div class="text">
-                <h4>One Piece</h4>
-            </div>
-        </div>
-        <div class="t-card">
-            <div class="img">
-                <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg" alt="">
-            </div>
-            <div class="text">
-                <h4>One Piece</h4>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
 </div>

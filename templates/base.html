@@ -4,25 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" />
     <title>HanaFlix</title>
     <script src="https://kit.fontawesome.com/a8893920d4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/static/index.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <h3>HanaFlix</h3>
-            <div class="links">
-                <a class="allTransition" href="/about">Trending</a>
+            <h3 class="text-2xl md:text-3xl">HanaFlix</h3>
+            <div class="links hidden md:flex items-center gap-5 font-semi-bold">
+                <a class="allTransition" href="{{ url_for('trending', time='daily', page=0) }}">Trending</a>
                 <a class="allTransition" href="/contact">Browse</a>
                 <a class="allTransition" href="/login">Images</a>
                 <div>
                     <input type="text" placeholder="Search">
                 </div>
             </div>
+            <div class="mobile-toggle block text-2xl md:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </nav>
     </header>
+    <div class="mobile-nav absolute left-0 right-0 w-full h-[300px]">
+    
+    </div>
+    
+    <script src="/static/script.js"></script>
 </body>
 
 </html>
