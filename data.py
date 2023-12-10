@@ -1,7 +1,7 @@
 import requests
 from fake_useragent import UserAgent
 import secrets
-import json
+# import json
 
 class HanimeBrain:
     def __init__(self):
@@ -10,7 +10,7 @@ class HanimeBrain:
     def getData(self, url):
         headers = {"X-Signature-Version": "web2", "X-Signature": secrets.token_hex(32), "User-Agent": UserAgent().random}
         response = requests.get(self.BASE_URL + url, headers=headers)
-        return response.json()
+        return headers
 
     def getTrending(self, time, page):
         timeAll = ["daily", "weekly", "monthly", "quarterly","semi-annually", "yearly"]
@@ -62,7 +62,3 @@ class HanimeBrain:
         #     "hits": json.loads(responseJson("hits")) 
         # }
         return responseJson
-
-l = HanimeBrain()
-p = l.getSearch("Goblin no Suana", 0)
-print(p)

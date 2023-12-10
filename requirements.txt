@@ -1,5 +1,5 @@
 Flask
 Gunicorn
-# secrets
-# fake_useragent
-# json
+secrets
+fake_useragent
+requests
