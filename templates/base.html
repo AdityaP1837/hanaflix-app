@@ -14,11 +14,15 @@
 <body>
     <header>
         <nav>
-            <h3 class="text-2xl md:text-3xl">HanaFlix</h3>
+            <h3 class="text-2xl md:text-3xl hover:opacity-80 cursor-pointer allTransition">
+                <a href="/">
+                    HanaFlix
+                </a>
+            </h3>
             <div class="links hidden md:flex items-center gap-5 font-semi-bold">
                 <a class="allTransition" href="{{ url_for('trending', time='daily', page=0) }}">Trending</a>
-                <a class="allTransition" href="/contact">Browse</a>
-                <a class="allTransition" href="/login">Images</a>
+                <a class="allTransition" href="{{ url_for('browse') }}">Browse</a>
+                <a class="allTransition" href="{{ url_for('images', tag='meta') }}">Images</a>
                 <div>
                     <input type="text" placeholder="Search">
                 </div>
@@ -28,10 +32,18 @@
             </div>
         </nav>
     </header>
-    <div class="mobile-nav absolute left-0 right-0 w-full h-[300px]">
-    
+    <div class="mobile-nav absolute top-[60px] left-0 right-0 w-full h-[250px]">
+        <div class="flex flex-col gap-8 mt-4 items-center justify-center">
+            <a class="allTransition text-xl font-semibold"
+                href="{{ url_for('trending', time='daily', page=0) }}">Trending</a>
+            <a class="allTransition text-xl font-semibold" href="{{ url_for('browse') }}">Browse</a>
+            <a class="allTransition text-xl font-semibold" href="{{ url_for('images', tag='meta') }}">Images</a>
+            <div>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
     </div>
-    
+
     <script src="/static/script.js"></script>
 </body>
 

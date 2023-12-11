@@ -111,6 +111,9 @@ header nav h3 {
 	font-weight: 900;
 }
 
+header nav .links a {
+	font-weight: 700;
+}
 header nav .links a:hover {
 	opacity: .7;
 }
@@ -138,12 +141,12 @@ header nav .links div input[type="text"]:focus {
 .mobile-nav {
 	top: -100%;
 	display: none;
-	background: rgba(0, 31, 102, 0.9);
+	background: rgba(0, 46, 153, 0.6);
 	transition: top 0.3s ease-in-out;
 }
 
 .mobile-nav.active {
-	top: 0;
+	top: 60px;
 	display: block;
 }
 
@@ -200,3 +203,6 @@ header nav .links div input[type="text"]:focus {
 	color: var(--text-100);
 	font-weight: 800;
 }
+/* .watchPage {
+	background: var(--background-600);
+} */

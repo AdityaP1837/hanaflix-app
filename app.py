@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect
-from lol import lol
+from lol import lol, imagesA, watchData
 app = Flask(__name__)
 
 @app.route('/')
@@ -16,7 +16,11 @@ def browse():
 
 @app.route('/watch/<slug>')
 def watch(slug):
-    return render_template("watch.html")
+    return render_template("watch.html", data=watchData)
+                                                        
+@app.route('/images/<tag>')
+def images(tag):
+    return render_template("images.html", data=imagesA)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host="0.0.0.0")
